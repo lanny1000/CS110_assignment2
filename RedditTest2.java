@@ -97,12 +97,11 @@ public class RedditTest2 {
 
 			// }
 
-			System.out.println(counter);
-			System.out.println(total);
-			double percentage = ((double)counter / (double)total) * 100;
-			System.out.printf("Percentage: %4.1f; Counter: %d;\n", percentage, counter);
-			System.out.println(Double.toString(percentage) + "% of the text contained in " + fileName.toString() + " is the keyword: trump.");
-
+			System.out.println("Number of instances of the keyword: " + counter);
+			System.out.println("Total number of words: " + total);
+			float percentage = ((float)counter / (float)total) * 100;
+			System.out.println("Percentage of instances found in the file: " + percentage + "%");
+		
 		}
 
 		catch (Exception ex) {
