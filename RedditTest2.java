@@ -11,8 +11,8 @@ public class RedditTest2 {
 		File fileName;
 		BufferedReader readFile = null;
 		String line = null;
-		double total = 0;
-		double counter = 0;
+		float total = 0;
+		float counter = 0;
 		String pattern = null;
 		char letter = 0;
 		
@@ -20,6 +20,8 @@ public class RedditTest2 {
 
 		try {
 
+			System.out.println("This class can scan a .txt file (particularly redditPosts.txt and redditAuthors.txt)"
+					+ " for an inputted keyword.");
 			System.out.println("Input the filename (with extension) of the file that you would like to parse.");
 			fileName = new File(input.nextLine());
 
@@ -99,7 +101,7 @@ public class RedditTest2 {
 
 			System.out.println("Number of instances of the keyword: " + counter);
 			System.out.println("Total number of words: " + total);
-			float percentage = ((float)counter / (float)total) * 100;
+			float percentage = (counter / total) * 100;
 			System.out.println("Percentage of instances found in the file: " + percentage + "%");
 		
 		}
