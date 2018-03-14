@@ -15,7 +15,7 @@ public class RedditTest6 {
 		BufferedReader readFile = null;
 		String line = null;
 		char blankSpace = 0;
-		String[] expletiveArray = {"fuck", "shit", "cuck", "dick"};
+		String[] expletiveArray = {"fuck", "shit", "bitch", "damn"};
 		String expletive = null;
 		Pattern analyzeRegEx;
 		Matcher stringFinder;
