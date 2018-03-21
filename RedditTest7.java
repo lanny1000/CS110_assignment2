@@ -9,11 +9,11 @@ public class RedditTest7 {
 		File fileName;
 		BufferedReader readFile = null;
 		String line = null;
-		int fileEntries = 6467;
+		int fileEntries = 6466;
 		int i = 0;
 		String[] fileArray = new String[fileEntries];
 		int strCount = 0;
-		boolean outcome = false;
+		// boolean outcome = false;
 		
 		try {
 			
@@ -35,22 +35,16 @@ public class RedditTest7 {
 			}
 
 			for (int j = 0; j < fileEntries - 1; j++) {
-				
-				if (fileArray[j] == fileArray[j + 1]) {
-						
-						outcome = true;
-						strCount++;
 
-					}
-				
-				else {
-					
-					outcome = false;
-					
+				while (fileArray[j].equalsIgnoreCase(fileArray[j + 1])) {
+
+					strCount++;
+					j++;
+
 				}
-				
+
 			}
-			
+
 		}
 		
 		catch (Exception ex) {
@@ -67,7 +61,7 @@ public class RedditTest7 {
 		
 		System.out.println("This is a cleaner version of RedditTest5.java.");
 		
-		String response = "redditPosts.txt";
+		String response = "redditAuthors.txt";
 		int counter = repeatedStrFinder(response);
 		System.out.println(Integer.toString(counter));
 
